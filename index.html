@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JU Smart Tools</title>
+<script>
+try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}
+</script>
+<link rel="icon" href="img/JULogo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg"></div>
+<div id="prog"></div>
+<header class="top"><div class="top-in">
+  <a class="brand" href="#" aria-label="JU Smart Tools home"><span class="logo"><img src="img/JULogo.png" alt="University of Jammu logo" onerror="this.parentNode.classList.add('nologo');this.parentNode.textContent='JU'"></span><div><h1>JU Smart Tools</h1><p>A CITES&amp;ET initiative &middot; University of Jammu</p></div></a>
+  <button id="theme" class="sec" type="button">Dark</button>
+</div></header>
+
+<main class="wrap">
+<section id="hero" class="hero">
+  <span class="badge">&#10024; 13 free tools &middot; No sign-up &middot; No uploads</span>
+  <h2>Every file tool you need,<br><span>beautifully simple.</span></h2>
+  <p>Resize, convert, merge, sign and more. Everything runs privately on your own device.</p>
+  <div class="sbox"><span class="sico">&#128269;</span><input type="search" id="search" placeholder="Search tools... (merge, split, compress, QR)"></div>
+  <div class="fchips">
+    <button class="fchip on" data-c="all" type="button">All</button><button class="fchip" data-c="convert" type="button">Convert</button><button class="fchip" data-c="organize" type="button">Organize PDF</button><button class="fchip" data-c="edit" type="button">Edit &amp; Sign</button><button class="fchip" data-c="images" type="button">Images</button><button class="fchip" data-c="utility" type="button">Utilities</button>
+  </div>
+  <div class="stats"><div class="stat"><b data-to="13">13</b><span>Tools</span></div><div class="stat"><b data-to="100" data-suf="%">100%</b><span>Free</span></div><div class="stat"><b>0</b><span>Files uploaded</span></div></div>
+</section>
+
+<section id="home" class="cards">
+  <button class="tool" data-t="resize" data-cat="images" type="button"><span class="ti c1">🖼️</span><span class="cat">Images</span><h3>Resize Images</h3><p>Change size in px, percent or file size (KB/MB). Many images at once.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="img2pdf" data-cat="convert" type="button"><span class="ti c2">📄</span><span class="cat">Convert</span><h3>Image to PDF</h3><p>Turn photos into a PDF. Reorder pages, pick size and margin.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="doc2pdf" data-cat="convert" type="button"><span class="ti c3">📝</span><span class="cat">Convert</span><h3>Doc to PDF</h3><p>Convert Word (.docx), text and HTML files to PDF.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="pdf2doc" data-cat="convert" type="button"><span class="ti c4">📑</span><span class="cat">Convert</span><h3>PDF to Word</h3><p>Turn a PDF into an editable Word file with headings, lists, tables and pictures.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="ppt" data-cat="convert" type="button"><span class="ti c6">📊</span><span class="cat">Convert</span><h3>PowerPoint to PDF</h3><p>Convert a .pptx presentation to PDF, one page per slide.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="merge" data-cat="organize" type="button"><span class="ti c5">🔗</span><span class="cat">Organize PDF</span><h3>Merge PDFs</h3><p>Combine PDFs, rearrange or remove files and pages. Compress too.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="split" data-cat="organize" type="button"><span class="ti c6">✂️</span><span class="cat">Organize PDF</span><h3>Split PDF</h3><p>Split into single pages, ranges, or extract chosen pages.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="compress" data-cat="organize" type="button"><span class="ti c1">🗜️</span><span class="cat">Organize PDF</span><h3>Compress &amp; Resize PDF</h3><p>Shrink a PDF or reach a size like 200 KB or 2 MB. Text stays selectable.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="nup" data-cat="organize" type="button"><span class="ti c2">🧩</span><span class="cat">Organize PDF</span><h3>Multiple Pages Per Sheet</h3><p>Put 2, 4, 6 or 9 pages on one sheet to save paper.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="addimg" data-cat="edit" type="button"><span class="ti c3">🏷️</span><span class="cat">Edit &amp; Sign</span><h3>Add Image to PDF</h3><p>Place a logo, photo or stamp on any pages. Size and opacity.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="sign" data-cat="edit" type="button"><span class="ti c4">✍️</span><span class="cat">Edit &amp; Sign</span><h3>Sign PDF</h3><p>Draw, type or upload a signature and place it on any page.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="fill" data-cat="edit" type="button"><span class="ti c5">📋</span><span class="cat">Edit &amp; Sign</span><h3>Fill PDF Form</h3><p>Fill the fields of a PDF form, tick boxes and download.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+  <button class="tool" data-t="qr" data-cat="utility" type="button"><span class="ti c2">🔳</span><span class="cat">Utilities</span><h3>QR Code Generator</h3><p>Turn any link or text into a QR code. Pick colors, download PNG or SVG.</p><span class="go">Open tool <i>&rarr;</i></span></button>
+</section>
+
+<section class="panel hidden" id="t-resize">
+  <button class="back" type="button">&larr; All tools</button><h2>Resize Images</h2>
+  <div class="card"><div class="drop" id="rDrop"><b>Drop images here</b><span>or click to choose. You can pick many at once.</span></div>
+  <input type="file" id="rFile" accept="image/*" multiple class="hidden"></div>
+  <div id="rTool" class="hidden">
+    <div class="card">
+      <div class="grid">
+        <div><label>Resize mode</label><select id="rMode"><option value="px">Custom size (px)</option><option value="pct">Percentage</option><option value="orig">Keep original size</option></select></div>
+        <div><label>Format</label><select id="rFmt"><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option><option value="image/png">PNG</option></select></div>
+      </div>
+      <div id="rPxBox" class="gap">
+        <div class="grid"><div><label>Width (px)</label><input type="number" id="rW" min="1"></div><div><label>Height (px)</label><input type="number" id="rH" min="1"></div></div>
+        <label class="chk"><input type="checkbox" id="rLock" checked> Lock aspect ratio (with many images, width is used and height is worked out for each)</label>
+      </div>
+      <div id="rPctBox" class="gap hidden"><label>Scale: <b id="rPv">50</b>%</label><input type="range" id="rPct" min="5" max="400" value="50"></div>
+      <div class="gap"><label>Quality: <b id="rQv">80</b>% <span id="rQn" class="tag"></span></label><input type="range" id="rQ" min="1" max="100" value="80"></div>
+      <div class="gap">
+        <label class="chk" style="margin-top:0"><input type="checkbox" id="rTg"> Limit the file size (you choose the maximum)</label>
+        <div id="rTgBox" class="hidden">
+          <div class="row" style="margin-top:8px"><input type="number" id="rTv" min="1" value="200" style="flex:1"><select id="rTu" style="width:90px"><option value="1024">KB</option><option value="1048576">MB</option></select></div>
+          <div class="row" style="margin-top:8px"><button type="button" class="sec sm chip" data-v="50" data-u="1024">50 KB</button><button type="button" class="sec sm chip" data-v="100" data-u="1024">100 KB</button><button type="button" class="sec sm chip" data-v="200" data-u="1024">200 KB</button><button type="button" class="sec sm chip" data-v="500" data-u="1024">500 KB</button><button type="button" class="sec sm chip" data-v="1" data-u="1048576">1 MB</button><button type="button" class="sec sm chip" data-v="2" data-u="1048576">2 MB</button></div>
+          <p class="note">Each image stays at or below this size. The tool picks the best quality that fits, and makes the image a little smaller only if it has to. The quality slider is off while this is on.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="head"><div id="rSum"></div><div class="row"><button id="rAll" type="button">Download all (ZIP)</button><button class="sec" id="rAdd" type="button">Add more</button><button class="sec" id="rClear" type="button">Clear</button></div></div>
+      <div id="rList"></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel hidden" id="t-img2pdf">
+  <button class="back" type="button">&larr; All tools</button><h2>Image to PDF</h2>
+  <div class="card"><div class="drop" id="pDrop"><b>Drop images here</b><span>JPG, PNG or WebP. Each image becomes one PDF page.</span></div>
+  <input type="file" id="pFile" accept="image/*" multiple class="hidden"></div>
+  <div id="pTool" class="hidden">
+    <div class="card">
+      <div class="grid3">
+        <div><label>Page size</label><select id="pSize"><option value="a4">A4</option><option value="letter">Letter</option><option value="fit">Same as image</option></select></div>
+        <div><label>Margin</label><select id="pMargin"><option value="0">None</option><option value="20" selected>Small</option><option value="40">Medium</option></select></div>
+        <div><label>Image quality</label><select id="pQ"><option value="0.6">Low (small file)</option><option value="0.8" selected>Medium</option><option value="0.95">High</option></select></div>
+      </div>
+    </div>
+    <div class="card"><div class="head"><div id="pSum"></div><div class="row"><button id="pGo" type="button">Create PDF</button><button class="sec" id="pAdd" type="button">Add more</button></div></div><div id="pList"></div></div>
+  </div>
+</section>
+
+<section class="panel hidden" id="t-doc2pdf">
+  <button class="back" type="button">&larr; All tools</button><h2>Doc to PDF</h2>
+  <div class="card"><div class="drop" id="dDrop"><b>Drop Word (.docx), text (.txt) or HTML files</b><span>Word files keep their own page size, margins, tables, headers and footers.</span></div>
+  <input type="file" id="dFile" accept=".docx,.txt,.html,.htm" multiple class="hidden"></div>
+  <div id="dTool" class="hidden">
+    <div class="card"><div class="grid3">
+      <div><label>Quality</label><select id="dQ"><option value="std" selected>Standard</option><option value="high">High (bigger file)</option></select></div>
+      <div><label>Page size (text &amp; HTML files)</label><select id="dSize"><option value="a4" selected>A4</option><option value="letter">Letter</option></select></div>
+      <div><label>Margin (text &amp; HTML files)</label><select id="dMargin"><option value="40">Small</option><option value="64" selected>Normal</option><option value="96">Large</option></select></div>
+    </div></div>
+    <div class="card"><div class="head"><div id="dSum"></div><div class="row"><button id="dGo" type="button">Convert to PDF</button><button class="sec" id="dAdd" type="button">Add more</button></div></div><div id="dList"></div>
+    <p class="note">Lines, paragraphs and table rows are never cut between pages. Text in the PDF can be searched, selected and copied, and links stay clickable. Fonts that are not on your device are replaced by a close match.</p></div>
+  </div>
+</section>
+
+<section class="panel hidden" id="t-pdf2doc">
+  <button class="back" type="button">&larr; All tools</button><h2>PDF to Word</h2>
+  <div class="card"><div class="drop" id="wDrop"><b>Drop PDF files here</b><span>Headings, lists, tables, bold text, links and pictures are rebuilt in Word. Scanned PDFs without a text layer will not work.</span></div>
+  <input type="file" id="wFile" accept="application/pdf,.pdf" multiple class="hidden"></div>
+  <div id="wTool" class="hidden"><div class="card"><div class="head"><div id="wSum"></div><div class="row"><button id="wGo" type="button">Convert to Word</button><button class="sec" id="wAdd" type="button">Add more</button></div></div><div id="wList"></div>
+  <p class="note">The result is a .docx file that opens in Word. Text colours and exact fonts may differ a little from the PDF.</p></div></div>
+</section>
+
+<section class="panel hidden" id="t-merge">
+  <button class="back" type="button">&larr; All tools</button><h2>Merge PDFs</h2>
+  <div class="card"><div class="drop" id="mDrop"><b>Drop PDF files here</b><span>Add as many as you need. Use the arrows to rearrange.</span></div>
+  <input type="file" id="mFile" accept="application/pdf,.pdf" multiple class="hidden"></div>
+  <div id="mTool" class="hidden">
+    <div class="card"><div class="grid">
+      <div><label>Remove pages after merging (optional)</label><input type="text" id="mRem" placeholder="Example: 2, 5-7"></div>
+      <div><label>Compress the result</label><select id="mComp"><option value="-1">No</option><option value="0">Light</option><option value="2">Medium</option><option value="4">Strong</option></select></div>
+    </div></div>
+    <div class="card"><div class="head"><div id="mSum"></div><div class="row"><button id="mGo" type="button">Merge PDFs</button><button class="sec" id="mAdd" type="button">Add more</button></div></div><div id="mList"></div></div>
+  </div>
+</section>
+
+<section class="panel hidden" id="t-split">
+  <button class="back" type="button">&larr; All tools</button><h2>Split PDF</h2>
+  <div class="card"><div class="drop" id="sDrop"><b>Drop one PDF here</b><span>or click to choose.</span></div>
+  <input type="file" id="sFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="sTool" class="hidden"><div class="card">
+    <div id="sInfo" class="m"></div>
+    <div class="grid gap">
+      <div><label>How to split</label><select id="sMode"><option value="each">Every page as its own file (ZIP)</option><option value="ranges">Custom ranges as separate files (ZIP)</option><option value="extract">Extract chosen pages into one PDF</option></select></div>
+      <div id="sRangeBox" class="hidden"><label>Pages</label><input type="text" id="sRange" placeholder="Example: 1-3, 5, 8-10"></div>
+    </div>
+    <div class="row gap"><button id="sGo" type="button">Split PDF</button><button class="sec" id="sClear" type="button">Choose another</button></div>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-compress">
+  <button class="back" type="button">&larr; All tools</button><h2>Compress &amp; Resize PDF</h2>
+  <div class="card"><div class="drop" id="cDrop"><b>Drop one PDF here</b><span>Pictures inside are made smaller. Text stays selectable.</span></div>
+  <input type="file" id="cFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="cTool" class="hidden"><div class="card">
+    <div id="cInfo" class="m"></div>
+    <div class="grid gap">
+      <div><label>Goal</label><select id="cMode"><option value="level">Make it smaller</option><option value="target">Reach a target size</option></select></div>
+      <div id="cLevelBox"><label>Strength</label><select id="cLevel"><option value="0">Light</option><option value="2" selected>Medium</option><option value="4">Strong</option></select></div>
+      <div id="cTargetBox" class="hidden"><label>Target size</label><div class="row"><input type="number" id="cSize" min="1" value="500" style="flex:1"><select id="cUnit" style="width:90px"><option value="1024">KB</option><option value="1048576">MB</option></select></div></div>
+    </div>
+    <label class="chk"><input type="checkbox" id="cPics"> If the target cannot be reached, allow "pictures mode" (pages become images, text is not selectable)</label>
+    <div class="row gap"><button id="cGo" type="button">Compress PDF</button><button class="sec" id="cClear" type="button">Choose another</button></div>
+    <p id="cRes" class="note"></p>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-nup">
+  <button class="back" type="button">&larr; All tools</button><h2>Multiple Pages Per Sheet</h2>
+  <div class="card"><div class="drop" id="nDrop"><b>Drop one PDF here</b><span>or click to choose.</span></div>
+  <input type="file" id="nFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="nTool" class="hidden"><div class="card">
+    <div id="nInfo" class="m"></div>
+    <div class="grid gap">
+      <div><label>Pages per sheet</label><select id="nPer"><option value="2">2</option><option value="4" selected>4</option><option value="6">6</option><option value="9">9</option></select></div>
+      <div><label>Sheet margin</label><select id="nMar"><option value="10">Small</option><option value="24" selected>Medium</option><option value="40">Large</option></select></div>
+    </div>
+    <div class="row gap"><button id="nGo" type="button">Create PDF</button><button class="sec" id="nClear" type="button">Choose another</button></div>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-addimg">
+  <button class="back" type="button">&larr; All tools</button><h2>Add Image to PDF</h2>
+  <div class="card"><div class="drop" id="aDrop"><b>Drop one PDF here</b><span>or click to choose.</span></div>
+  <input type="file" id="aFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="aTool" class="hidden"><div class="card">
+    <div id="aInfo" class="m"></div>
+    <div class="gap"><label>Image (logo, photo or stamp)</label><input type="file" id="aImg" accept="image/*"></div>
+    <div class="grid gap">
+      <div><label>Pages (all, or like 1, 3-5)</label><input type="text" id="aPages" value="all"></div>
+      <div><label>Position</label><select id="aPos"><option value="tl">Top left</option><option value="tc">Top center</option><option value="tr">Top right</option><option value="ml">Middle left</option><option value="mc">Center</option><option value="mr">Middle right</option><option value="bl">Bottom left</option><option value="bc">Bottom center</option><option value="br" selected>Bottom right</option></select></div>
+      <div><label>Image width: <b id="aWv">25</b>% of page</label><input type="range" id="aW" min="5" max="100" value="25"></div>
+      <div><label>Opacity: <b id="aOv">100</b>%</label><input type="range" id="aO" min="10" max="100" value="100"></div>
+    </div>
+    <label class="chk"><input type="checkbox" id="aNew"> Add the image as a new last page instead</label>
+    <div class="row gap"><button id="aGo" type="button">Add image</button><button class="sec" id="aClear" type="button">Choose another</button></div>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-sign">
+  <button class="back" type="button">&larr; All tools</button><h2>Sign PDF</h2>
+  <div class="card"><div class="drop" id="gDrop"><b>Drop one PDF here</b><span>or click to choose.</span></div>
+  <input type="file" id="gFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="gTool" class="hidden">
+    <div class="card">
+      <div id="gInfo" class="m"></div>
+      <div class="row gap"><button class="sec sm gtab on" data-m="draw" type="button">Draw</button><button class="sec sm gtab" data-m="type" type="button">Type</button><button class="sec sm gtab" data-m="up" type="button">Upload</button>
+        <label class="chk" style="margin:0 0 0 auto;align-items:center">Ink color <input type="color" id="gCol" value="#1a1a8c"></label></div>
+      <div id="gDraw" class="gap"><canvas id="gPad" width="600" height="180"></canvas><div class="row" style="margin-top:8px"><button class="sec sm" id="gClr" type="button">Clear</button><span class="m">Draw your signature with mouse, finger or pen.</span></div></div>
+      <div id="gType" class="gap hidden"><div class="grid"><input type="text" id="gTxt" placeholder="Type your name"><select id="gFont"><option value="'Brush Script MT','Segoe Script','Snell Roundhand',cursive">Style 1</option><option value="'Segoe Script','Lucida Handwriting','Comic Sans MS',cursive">Style 2</option><option value="'Lucida Handwriting','Bradley Hand','Comic Sans MS',cursive">Style 3</option></select></div></div>
+      <div id="gUp" class="gap hidden"><input type="file" id="gImg" accept="image/*"><label class="chk"><input type="checkbox" id="gRm" checked> Remove white background</label></div>
+      <div class="row gap"><button id="gUse" type="button">Use this signature</button><button class="sec" id="gClear" type="button">Choose another PDF</button></div>
+    </div>
+    <div class="card hidden" id="gPlace">
+      <div class="head"><div class="m">Click on the page to place your signature.</div><div class="row"><button class="sec sm" id="gPrevB" type="button">&larr;</button><span id="gPg" class="m"></span><button class="sec sm" id="gNextB" type="button">&rarr;</button></div></div>
+      <div id="gWrap"><canvas id="gPrev"></canvas><img id="gSig" alt="" class="hidden"></div>
+      <div class="grid gap">
+        <div><label>Signature size: <b id="gSv">25</b>% of page width</label><input type="range" id="gSize" min="5" max="60" value="25"></div>
+        <div><label>Put it on</label><select id="gApply"><option value="one">This page only</option><option value="last">Last page</option><option value="all">All pages</option></select></div>
+      </div>
+      <label class="chk"><input type="checkbox" id="gDate"> Add today's date under the signature</label>
+      <div class="row gap"><button id="gGo" type="button">Sign &amp; download</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel hidden" id="t-fill">
+  <button class="back" type="button">&larr; All tools</button><h2>Fill PDF Form</h2>
+  <div class="card"><div class="drop" id="fDrop"><b>Drop a PDF form here</b><span>It must have fillable fields. We show every field we find.</span></div>
+  <input type="file" id="fFile" accept="application/pdf,.pdf" class="hidden"></div>
+  <div id="fTool" class="hidden"><div class="card">
+    <div id="fInfo" class="m"></div>
+    <div id="fFields" class="gap"></div>
+    <label class="chk" id="fFlatBox"><input type="checkbox" id="fFlat"> Lock the answers (they can no longer be edited)</label>
+    <div class="row gap"><button id="fGo" type="button">Fill &amp; download</button><button class="sec" id="fClear" type="button">Choose another</button></div>
+    <p class="note">Use English letters and numbers. Some fonts in forms cannot save other scripts (for example Hindi).</p>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-ppt">
+  <button class="back" type="button">&larr; All tools</button><h2>PowerPoint to PDF</h2>
+  <div class="card"><div class="drop" id="oDrop"><b>Drop a PowerPoint (.pptx) file here</b><span>Each slide becomes one PDF page. Everything happens on your device.</span></div>
+  <input type="file" id="oFile" accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation" class="hidden"></div>
+  <div id="oTool" class="hidden"><div class="card">
+    <div id="oInfo" class="m"></div>
+    <div class="row gap"><button id="oGo" type="button">Convert to PDF</button><button class="sec" id="oClear" type="button">Choose another</button></div>
+    <p id="oRes" class="note"></p>
+    <p class="note">Text, shapes, pictures, tables and backgrounds are drawn. Charts and diagrams (SmartArt) are not supported. Pages are saved as pictures, so text cannot be selected. Fonts that are not on your computer may look different.</p>
+  </div></div>
+</section>
+
+<section class="panel hidden" id="t-qr">
+  <button class="back" type="button">&larr; All tools</button><h2>QR Code Generator</h2>
+  <div class="card"><label for="qText">Link or text</label><textarea id="qText" placeholder="Paste a link, for example https://example.com"></textarea></div>
+  <div class="card">
+    <div class="grid">
+      <div>
+        <label>Size</label><select id="qSize"><option value="256">Small (256 px)</option><option value="512" selected>Medium (512 px)</option><option value="1024">Large (1024 px)</option><option value="2048">Extra large (2048 px)</option></select>
+        <div class="grid gap"><div><label>QR color</label><input type="color" id="qFg" value="#1b1336"></div><div><label>Background</label><input type="color" id="qBg" value="#ffffff"></div></div>
+        <div class="gap"><label>Error correction (higher can still scan if damaged)</label><select id="qEc"><option value="L">Low (7%)</option><option value="M" selected>Medium (15%)</option><option value="Q">Quartile (25%)</option><option value="H">High (30%)</option></select></div>
+        <div class="gap"><label>White border</label><select id="qMargin"><option value="0">None</option><option value="2">Small</option><option value="4" selected>Normal</option><option value="6">Large</option></select></div>
+      </div>
+      <div class="qr-prev"><canvas id="qCanvas" width="10" height="10" class="hidden"></canvas><div id="qEmpty" class="m">Type a link above to see your QR code here.</div></div>
+    </div>
+    <p id="qMsg" class="note"></p>
+    <div class="row gap"><button id="qPng" type="button" disabled>Download PNG</button><button class="sec" id="qSvg" type="button" disabled>Download SVG</button></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand reveal">
+      <div class="fb"><span class="logo"><img src="img/JULogo.png" alt="University of Jammu logo" onerror="this.parentNode.classList.add('nologo');this.parentNode.textContent='JU'"></span><div><b>JU Smart Tools</b><p>Free image and document tools for everyone.</p></div></div>
+      <p class="fnote">A digital initiative of the <b>Centre for IT Enabled Services &amp; Emerging Technologies (CITES&amp;ET)</b>, University of Jammu.</p>
+      <div class="fpills"><span>&#128274; Private</span><span>&#9889; Fast</span><span>&#127379; Free</span></div>
+    </div>
+    <div class="fcol reveal"><h4>Organize PDF</h4><a href="#merge">Merge PDFs</a><a href="#split">Split PDF</a><a href="#compress">Compress &amp; Resize PDF</a><a href="#nup">Pages Per Sheet</a></div>
+    <div class="fcol reveal"><h4>Convert</h4><a href="#img2pdf">Image to PDF</a><a href="#doc2pdf">Doc to PDF</a><a href="#pdf2doc">PDF to Word</a><a href="#ppt">PowerPoint to PDF</a></div>
+    <div class="fcol reveal"><h4>More tools</h4><a href="#resize">Resize Images</a><a href="#sign">Sign PDF</a><a href="#fill">Fill PDF Form</a><a href="#qr">QR Code Generator</a></div>
+    <div class="fcol reveal"><h4>Your privacy</h4><p>Your files are processed inside your browser. Nothing is uploaded to any server.</p></div>
+  </div>
+  <div class="foot-bottom"><span>&copy; 2026 CITES&amp;ET, University of Jammu. All rights reserved.</span><span>Made by CITES&amp;ET</span></div>
+</footer>
+<div id="render"></div>
+<div id="slideBox"></div>
+<div id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx-preview@0.4.1/dist/docx-preview.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pdf-to-word.js"></script>
+<script src="js/doc-pdf.js"></script>
+<script src="js/pdf-tools.js"></script>
+<script src="js/pptx.js"></script>
+<script src="js/vendor/qrcode.js"></script>
+<script src="js/qr.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
